@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+.parent{
+    width: 1500px;
+    height: 1500px;
+    background-color:darkcyan;
+    position: relative;
+    margin: 50px auto;
+}
+.container{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-areas: 
+" one one one one one one two two two three three three "
+    " one one one one one one two two two three three three "
+    " one one one one one one two two two three three three "
+    " one one one one one one two two two three three three "
+    " four four four five five five five five five three three three "
+    " four four four five five five five five five three three three"
+    " four four four five five five five five five three three three"
+    " four four four five five five five five five three three three"
+    " four four four six six six six six six three three three"
+    " four four four six six six six six six three three three"
+    " four four four six six six six six six three three three"
+    " four four four six six six six six six three three three"
+    " seven seven seven eight eight eight nine nine nine ten ten ten"
+    " seven seven seven eight eight eight nine nine nine ten ten ten"
+    " seven seven seven eight eight eight nine nine nine ten ten ten"
+    " seven seven seven eight eight eight nine nine nine ten ten ten";
+column-gap: 20px;
+row-gap: 20px;
+}
+.one,
+.two,
+.four,
+.six,
+.seven,
+.nine,
+.ten{
+    background-color: #fff;
+}
+.three,
+.five,
+.eight{
+    background-color: #000;
+    color: #fff;
+}
+.container>div{
+    border-bottom: 2px solid orangered;
+    position: relative;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+grid-area: nine;
+}
+.ten{
+    grid-area: ten;
+}
+.name{
+    text-transform: capitalize;
+    position: absolute;
+    left: 5%;
+    top: 0%;
+    font-weight: bold;
+}
+.grey{
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: grey;
+} 
+.bold{
+    width: 90%;
+    height: 25%;
+    font-weight: bold;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+}
+.normal{
+    width: 90%;
+    height: 25%;
+    /* font-weight: bold; */
+    position: absolute;
+    left: 5%;
+    top: 60%;
+}
+.seven .grey,
+.eight .grey,
+.nine .grey,
+.ten .grey{
+    top: 23%;
+}
+.seven .bold,
+.eight .bold,
+.nine .bold,
+.ten .bold{
+    top: 37%;
+}
+.three .grey{
+    top: 5%;
+}
+.three .bold{
+    top: 10%;
+}
+.three .normal{
+    top: 53%;
+}
+.four .grey{
+    top: 7%;
+}
+.four .bold{
+    top: 14%;
+}
+.four .normal{
+    top: 35%;
+}
